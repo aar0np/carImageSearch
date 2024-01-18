@@ -38,6 +38,17 @@ Usage:
 python3 carSearch.py
 ```
 
+Terminal output:
+
+```
+JustPy ready to go on http://127.0.0.1:8000
+```
+
+If you navigate in your browser to [http://127.0.0.1:8000](http://127.0.0.1:8000), you may search in one of two ways:
+
+ - By text string
+ - By image
+
 ### carServices.py
 
  - Serves the `get_car_by_text` method (Controller).
