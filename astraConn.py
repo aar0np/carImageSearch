@@ -6,7 +6,6 @@ from astrapy.db import AstraDB
 ASTRA_DB_APPLICATION_TOKEN = os.environ.get("ASTRA_DB_APPLICATION_TOKEN")
 ASTRA_DB_API_ENDPOINT= os.environ.get("ASTRA_DB_API_ENDPOINT")
 
-
 # global cache variables to re-use a single Session
 db = None
 collection = None
