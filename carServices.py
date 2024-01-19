@@ -22,7 +22,7 @@ async def get_car_by_text(search_text):
     #should only be one result returned
     return IMAGE_DIR + results[0]["text"]
 
-async def get_car_by_file(file_path):
+async def get_car_by_image(file_path):
     global model
 
     if model is None:
