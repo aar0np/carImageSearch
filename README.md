@@ -1,6 +1,6 @@
 # carImageSearch
 
-An MVC-patterned Python application which relies on Image data written to [DataStax Astra DB](https://astra.datastax.com) by the [astrapyCLIPLoader.py](https://github.com/aar0np/astrapy-CLIP-demo/blob/main/astrapyCLIPLoader.py) from the [astrapy-CLIP-demo](https://github.com/aar0np/astrapy-CLIP-demo) repository. The application uses the [JustPy](https://justpy.io/) library to build a small front end to allow for searching on the image file data. It ultimately uses the [astrapy](https://github.com/datastax/astrapy) library to access and work with the underlying vector embeddings in Astra DB.
+An MVC-patterned Python application which works on vectorized image data written to [DataStax Astra DB](https://astra.datastax.com). The application uses the [JustPy](https://justpy.io/) library to build a small front end to allow for searching on the image file data. It ultimately uses the [astrapy](https://github.com/datastax/astrapy) library to access and work with the underlying vector embeddings in Astra DB.
 
 ## Requirements
 
@@ -26,6 +26,19 @@ pip install justpy
 ## Functionality
 
 Descriptions and examples for each Python file in the project.
+
+### carImageLoader.py
+ 
+ - Creates a new collection named car_images using astrapy.
+ - Cycles through all files in the `images/` directory.
+ - Generates embeddings for each image file.
+ - Stores vector embeddings and metadata in Astra DB.
+
+Usage:
+
+```
+python3 carImageLoader.py
+```
 
 ### carSearch.py
 
