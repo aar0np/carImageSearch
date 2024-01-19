@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 
 # Astra connection
 ASTRA_DB_APPLICATION_TOKEN = os.environ.get("ASTRA_DB_APPLICATION_TOKEN")
-ASTRA_DB_API_ENDPOINT= os.environ.get("ASTRA_DB_API_ENDPOINT")
+ASTRA_DB_API_ENDPOINT = os.environ.get("ASTRA_DB_API_ENDPOINT")
 
 db = AstraDB(
     token=ASTRA_DB_APPLICATION_TOKEN,

@@ -49,6 +49,8 @@ fileInput = jp.Input(type='file', classes=jp.Styles.input_classes,
 fileInput.file_div = jp.Div(a=webp)
 
 # main image
+jp.get_tag('hr', a=webp)
+jp.P(text="search result:", a=webp)
 image = jp.Img(classes='m-2 p-2', a=webp, width=600)
 
 async def search():
