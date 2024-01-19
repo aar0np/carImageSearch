@@ -15,7 +15,8 @@ export ASTRA_DB_API_ENDPOINT=https://b9aff773-also-not-real-d3088ea14425-us-east
 ```
 
  - A local `images/` directory containing JPEGs or PNGs to embed.
- - Python dependencies: sentence-transformers, astrapy, and justpy
+ - A local `input_images/` directory containing JPEGs or PNGs to search by. _Any image you wish to search by must first be copied into this directory._
+ - Python dependencies: **sentence-transformers**, **astrapy**, and **justpy**.
 
 ```
 pip install sentence-transformers
