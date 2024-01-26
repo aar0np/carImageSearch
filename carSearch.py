@@ -9,6 +9,8 @@ app = Flask(__name__)
 #app.secret_key = os.urandom(24)
 app.config.from_object('config.ProdConfig')
 
+INPUT_IMAGE_DIR = "static/input_images/"
+
 @app.route('/')
 def index():
     return render_template('base.html')
@@ -28,7 +30,10 @@ async def search():
         response = await get_car_by_text(form.searched.data)
         return render_template("search.html", form=form, searched=form.searched.data, image_file=response, search_image_file="noImage.png")
     elif form.search_image.data != "":
+        search_image=form.search_image.data
+        search_image_file=search_image.filename
+        # save locally
+        search_image.save(os.path.join(INPUT_IMAGE_DIR, search_image_file))
         # execute vector search in Astra DB
-        search_image_file=form.search_image.data.filename
         response = await get_car_by_image(search_image_file)
         return render_template("search.html", form=form, searched=search_image_file, image_file=response, search_image_file=search_image_file)

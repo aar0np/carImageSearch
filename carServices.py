@@ -1,6 +1,7 @@
 from astraConn import get_by_vector
 from sentence_transformers import SentenceTransformer
 from PIL import Image
+import os
 
 IMAGE_DIR = "images/"
 INPUT_IMAGE_DIR = "static/input_images/"
