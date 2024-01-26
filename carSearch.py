@@ -6,7 +6,8 @@ from carServices import get_car_by_image
 import os
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
+#app.secret_key = os.urandom(24)
+app.config.from_object('config.ProdConfig')
 
 @app.route('/')
 def index():
