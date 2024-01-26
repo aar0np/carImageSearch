@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li>
+                <a class="nav-item" href="/">
+                    <img src="{{ url_for('static', filename='web_images/carsearch_logo.png')}}" height=50 class="image" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <form method="POST" action="{{ url_for('search') }}" class="d-flex" enctype = "multipart/form-data">
+        {{ form.hidden_tag() }}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+        <br/>
+        <input type="file" name="search_image">
+    </form>
+</nav>

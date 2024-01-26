@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<p>{{ searched }}</p>
+	<img src="{{ url_for('static', filename='input_images/' + search_image_file) }}" class="image" width=100>
+
+	<hr/>
+	
+	<img src="{{ url_for('static', filename=image_file) }}" class="image">
+
+{% endblock %}
