@@ -10,9 +10,13 @@
     </div>
     <form method="POST" action="{{ url_for('search') }}" class="d-flex" enctype = "multipart/form-data">
         {{ form.hidden_tag() }}
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched"
+            data-toggle="tooltip" data-placement="bottom" title="Type a car description here">
+        <div data-toggle="tooltip" data-placement="bottom" title="Click 'Search' for both text and image searches">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </div>
         <br/>
-        <input type="file" name="search_image">
+        <input type="file" name="search_image"
+            data-toggle="tooltip" data-placement="bottom" title="Upload a picture of a car">
     </form>
 </nav>
