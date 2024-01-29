@@ -13,7 +13,7 @@ INPUT_IMAGE_DIR = "static/input_images/"
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    return render_template('main.html')
 
 # Pass stuff to navbar
 @app.context_processor
