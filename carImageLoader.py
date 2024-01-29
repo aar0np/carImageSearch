@@ -18,7 +18,7 @@ col = db.create_collection("car_images", dimension=512, metric="cosine")
 
 model = SentenceTransformer('clip-ViT-B-32')
 
-IMAGE_DIR = "images/"
+IMAGE_DIR = "static/images/"
 
 for id, imageName in enumerate(os.listdir(IMAGE_DIR)):
 

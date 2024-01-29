@@ -2,6 +2,8 @@
 
 An MVC-patterned Python application which works on vectorized image data written to [DataStax Astra DB](https://astra.datastax.com). The application uses the [Flask](https://https://flask.palletsprojects.com/en/3.0.x/) library to build a small front end to allow for searching on the image file data. It ultimately uses the [astrapy](https://github.com/datastax/astrapy) library to access and work with the underlying vector embeddings in Astra DB.
 
+A running version of this repository's application can be found at: https://aploetz68.pythonanywhere.com/
+
 ## Requirements
 
  - A vector-enabled [Astra DB](https://astra.datastax.com) database
