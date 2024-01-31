@@ -6,10 +6,10 @@ from carServices import get_car_by_image
 import os
 
 app = Flask(__name__)
-#app.secret_key = os.urandom(24)
 app.config.from_object('config.ProdConfig')
 
 INPUT_IMAGE_DIR = "static/input_images/"
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 @app.route('/')
 def index():
@@ -33,7 +33,7 @@ async def search():
         search_image=form.search_image.data
         search_image_file=search_image.filename
         # save locally
-        search_image.save(os.path.join(INPUT_IMAGE_DIR, search_image_file))
+        search_image.save(os.path.join(basedir, INPUT_IMAGE_DIR, search_image_file))
         # execute vector search in Astra DB
         response = await get_car_by_image(search_image_file)
         return render_template("search.html", form=form, searched=search_image_file, image_file=response, search_image_file=search_image_file)
