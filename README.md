@@ -38,9 +38,11 @@ Descriptions and examples for each Python file in the project.
 ### carImageLoader.py
  
  - Creates a new collection named car_images using astrapy.
- - Cycles through all files in the `images/` directory.
+ - Cycles through all files in the `static/images/` directory.
  - Generates embeddings for each image file.
  - Stores vector embeddings and metadata in Astra DB.
+
+Note that most of the images in this repo are from the [Car Images Dataset](https://www.kaggle.com/datasets/kshitij192/cars-image-dataset) found on [Kaggle](https://www.kaggle.com).
 
 Usage:
 
