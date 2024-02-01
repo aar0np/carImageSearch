@@ -21,14 +21,11 @@ export FLASK_APP=carSearch
 You can use a `.env` file for the vars as well.
 
  - A local `static/images/` directory containing JPEGs or PNGs to embed.
- - A local `static/input_images/` directory containing JPEGs or PNGs to search by. _Any image you wish to search by must first be copied into this directory._
- - Python dependencies: **sentence-transformers**, **astrapy**, **flask** and **flask_wtf**.
+ - A local `static/input_images/` upload directory for JPEGs or PNGs to search _by_.
+ - Python dependencies: **sentence-transformers**, **astrapy**, **flask** and **flask_wtf**. These are found in the [requirements.txt](requirements.txt) file, and can quickly be installed with the following command:
 
 ```
-pip install sentence-transformers
-pip install astrapy
-pip install flask
-pip install flask_wtf
+pip install -r requirements.txt
 ```
 
 ## Functionality
