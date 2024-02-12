@@ -9,7 +9,7 @@ A running version of this repository's application can be found at: https://aplo
  - A vector-enabled [Astra DB](https://astra.datastax.com) database
  - An Astra DB application token
  - An Astra DB API endpoint
- - Environment variables defined for: `FLASK_ENV`, `FLASK_APP`, ASTRA_DB_APPLICATION_TOKEN`, and `ASTRA_DB_API_ENDPOINT`:
+ - Environment variables defined for: `FLASK_ENV`, `FLASK_APP`, `ASTRA_DB_APPLICATION_TOKEN`, and `ASTRA_DB_API_ENDPOINT`:
 
 ```
 export ASTRA_DB_APPLICATION_TOKEN=AstraCS:GgsdfSnotrealHqKZw:SDGSDDSG6a36d8526BLAHBLAHBLAHc18d40
