@@ -41,5 +41,11 @@ async def get_car_by_image(file_path):
     # execute vector search
     results = await get_by_vector(COLLECTION_NAME,img_emb,1)
 
+    image = None
     # should only be one result returned
-    return IMAGE_DIR + results[0]["text"]
+    for doc in results:
+        image = doc["text"]
+        break
+        
+    # should only be one result returned
+    return IMAGE_DIR + image
